@@ -44,9 +44,13 @@ learning_rate = 0.9 #the rate at which the AI agent should learn
 """
 
 # Run through N training episodes
-for episode in range(10):
+currenSrcID = 0
+for episode in range(environment_rows*environment_columns):
   #get the starting location for this episode
-  row_index, column_index = get_starting_location()
+
+  row_index = math.floor(currenSrcID / environment_rows)
+  column_index = currenSrcID % environment_rows
+  currenSrcID += 1
 
   #continue taking actions (i.e., moving) until we reach a terminal state
   #(i.e., until we reach the item packaging area or crash into an item storage location)
@@ -71,6 +75,6 @@ print('Training complete!')
 
 
 # Test
-# print(get_shortest_path(3, 9)) #starting at row 3, column 9
-# print(get_shortest_path(5, 0)) #starting at row 5, column 0
-# print(get_shortest_path(9, 5)) #starting at row 9, column 5
+print(get_shortest_path(3, 9)) #starting at row 3, column 9
+print(get_shortest_path(5, 0)) #starting at row 5, column 0
+print(get_shortest_path(9, 5)) #starting at row 9, column 5
