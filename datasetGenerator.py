@@ -202,7 +202,7 @@ imperfect - bool to make a dataset full of either mixed or perfect samples
 """
 # If changing imperfect_dataset - Make sure "raw_file_names()" returns correct file in dataset.py
 imperfect_dataset = False
-n_total_samples, n_imperfect_samples = generate_dataset(num_nodes=2500, imperfect=imperfect_dataset)
+n_total_samples, n_imperfect_samples = generate_dataset(num_nodes=3600, imperfect=imperfect_dataset)
 
 print(f"Number of samples: {n_total_samples}")
 print(f"Number of imperfect samples: {n_imperfect_samples}")

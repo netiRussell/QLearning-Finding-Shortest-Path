@@ -11,7 +11,7 @@ df = pd.read_parquet("./raw/perfect.parquet", engine="auto")
 df = df.reset_index(drop=True)
 
 # Randomly sample specified percentage of the data
-df_sampled = df.sample(frac=percentage, random_state=42)
+df_sampled = df.sample(frac=percentage, random_state=79)
 
 # Save the sampled DataFrame to a new parquet file
-df_sampled.to_parquet("./raw/rand80.parquet")
+df_sampled.to_parquet("./raw/60x60eval.parquet")
